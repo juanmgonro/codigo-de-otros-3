@@ -12,6 +12,7 @@ const li = document.getElementsByName("lista-de-productos")
 const $i = document.querySelector('.input');
 
 for (let i = 0; i < productos.length; i++) {
+  
   var d = document.createElement("div")
   d.classList.add("producto")
 
@@ -21,11 +22,12 @@ for (let i = 0; i < productos.length; i++) {
   
   var imagen = document.createElement("img");
   imagen.setAttribute('src', productos[i].img);
-
+  
+  li.appendChild(d)
   d.appendChild(ti)
   d.appendChild(imagen)
 
-  li.appendChild(d)
+  
 }
 
 displayProductos(productos)
